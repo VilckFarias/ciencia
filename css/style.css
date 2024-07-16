@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #E5F9E0;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.EcoRide-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: rgb(241, 196, 155);
+    border: 0;
+    border-radius: 30px;
+    transition: .2s;
+}
+
+button:hover,
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px rgb(241, 196, 155);
+    transform: scale(1.05);
+}
+
+h2.titulo {
+    color: rgb(0, 0, 0);
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: rgb(241, 196, 155);
+}
+/*estilo cabeçalho*/
+
+.logo {
+    width: 25%;
+    height: auto;
+}
+
+header {
+    padding: 10px 4%;
+}
+
+.header {
+    background: rgb(0, 0, 0);
+    padding-inline: 16px;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header {
+    background: rgb(0, 0, 0);
+    padding-inline: 16px;
+}
+
+header a {
+    color: #84f581;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: rgb(26, 129, 0);
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 35px;
+}
+.menu-mobile{
+    display: none;
+}
+
+/*topo do site*/
+
+section.topo-do-site {
+    padding: 120px 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1 {
+    color: rgb(0, 0, 0);
+    font-size: 38px;
+    line-height: 35px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+    color: rgb(241, 196, 155);
+}
+
+.topo-do-site .txt-topo-site p {
+    color: rgb(0, 0, 0);
+    margin: 40px 0px;
+}
+
+.topo-do-site .img-topo-site {
+    width: 60%;
+
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/*ESTILO DAS ESPECIALIDADES*/
+
+section.especialidades {
+    padding: 40px 4%;
+}
+
+section.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .especialidades-box {
+    color: rgb(0, 0, 0);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid white;
+    margin-top: 30px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(26, 129, 0);
+}
+
+.especialidades .especialidades-box i {
+    font-size: 70px;
+    color: rgb(241, 196, 155);
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/*ESTILO DO SOBRE*/
+
+section.sobre {
+    padding: 100px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre {
+    color: #000000;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: rgb(241, 196, 155);
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(241, 196, 155);
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* estilo do roda pé*/
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+.borda {
+    border-top: 2px solid rgb(26, 129, 0);
+}
+
+footer .line-footer p i {
+    color:  rgb(241, 196, 155);
+    font-size: 22px;
+}
+
+footer .line-footer p a {
+    color: rgb(26, 129, 0);
+}
+
+/*responsivo*/
+
+@media screen and (max-width: 1020px) {
+
+    .btn-abrir-menu i{
+        color: rgb(241, 196, 155);
+        font-size: 40px;
+    }
+
+    .menu-mobile{
+        background: black;
+        height: 120vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        width: 0%;
+        overflow: hidden;
+        transition: .5s;
+        display: block;
+    
+    }
+
+    .menu-mobile.abrir-menu{
+        width: 70%;
+    
+    }
+    .menu-mobile.abrir-menu ~ .overlay-menu{
+        display: block;
+    
+    }
+    .menu-mobile nav ul {
+        text-align: right;
+    }
+    
+    .menu-mobile nav ul li a {
+        color: wheat;
+        font-size: 20px;
+        font-weight: 300;
+        padding: 20px 8%;
+        display: block;
+    }
+    
+    .menu-mobile nav ul li a:hover{
+        background-color: #84f581;
+        color: rgb(26, 129, 0);
+    }
+    .menu-mobile .btn-fechar {
+        padding: 20px 5%;
+    }
+    .menu-mobile .btn-fechar i {
+        color: rgb(241, 196, 155);
+        font-size: 30px;
+    
+    }
+    .overlay-menu{
+        background-color: rgba(0, 0, 0, 0.74);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 88888;
+        display: none;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+    .topo-do-site .img-topo-site img {
+        max-width: 100%; /* Define a largura máxima da imagem para ocupar 100% do contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    .topo-do-site p {
+        font-size: 22px; /* Define o tamanho do texto para telas menores */
+    }
+    .flex {
+        
+        flex-direction: column;
+    }
+
+    h2.titulo {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    section.topo-do-site .flex {
+        gap: 20px;
+    }
+
+    .menu-desktop,
+    .EcoRide-contato {
+        display: none;
+    }
+
+    section.topo-do-site {
+        padding: 40px 8%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 30px;
+    }
+
+    .topo-do-site .img-topo-site {
+        width: 100%;
+    }
+
+    /*ESTILO DAS ESPECIALIDADES*/
+
+    section.especialidades {
+        padding: 40px 8%;
+    }
+    
+    section.especialidades .flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .especialidades .especialidades-box {
+        width: 100%;
+    }
+    
+ 
+
+    footer {
+        padding: 40px 4%;
+        box-shadow: 0 0 40px 10px rgb(241, 196, 155);
+        text-align: center; /* Centraliza o conteúdo do footer */
+        display: flex;
+        justify-content: center; /* Centraliza os elementos horizontalmente */
+        align-items: center; /* Alinha os elementos verticalmente */
+    }
+    
+    .logo-footer {
+        margin-bottom: 20px; /* Adiciona espaçamento abaixo da logo */
+        margin-right: 20px; /* Adiciona espaçamento à direita da logo */
+    }
+    
+    .logo-footer img {
+        width: 100px; /* Ajusta o tamanho da logo */
+    }
+    
+    footer .btn-social {
+        margin-top: 20px; /* Adiciona espaçamento acima dos botões de mídia social */
+    }
+    
+    footer .btn-social button {
+        margin: 0 15px; /* Adiciona espaçamento horizontal entre os botões */
+        width: 60px; /* Ajusta o tamanho dos botões de mídia social */
+        height: 60px;
+        font-size: 20px;
+        border-radius: 50%;
+        background-color: rgb(26, 129, 0);
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    
+    footer .btn-social button:hover {
+        transform: scale(1.1); /* Aumenta o tamanho dos botões ao passar o mouse */
+    }
+    
+    footer .line-footer {
+        margin-bottom: 20px; /* Adiciona espaçamento abaixo das linhas do footer */
+    }
+    
+    footer .logo-footer,
+    footer .btn-social {
+        margin-left: auto; /* Move a logo para a esquerda e os botões para a direita */
+        margin-right: auto;
+    }
+
+    
+
+
+ 
+}
